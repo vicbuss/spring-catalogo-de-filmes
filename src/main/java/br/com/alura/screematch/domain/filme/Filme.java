@@ -33,6 +33,12 @@ public class Filme {
                 ", genero='" + genero + '\'' +
                 '}';
     }
+    public void atualizaDados(DadosAlteracaoFilme dados) {
+        this.nome = dados.nome();
+        this.duracaoEmMinutos = dados.duracao();
+        this.anoLancamento = dados.ano();
+        this.genero = dados.genero();
+    }
 
     public Long getId() {
         return id;
@@ -69,4 +75,6 @@ public class Filme {
     public void setGenero(String genero) {
         this.genero = genero;
     }
+
+
 }
